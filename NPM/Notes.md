@@ -1,0 +1,2 @@
+- Sillyname is give the random name
+- superheroes is give the superheroes name
