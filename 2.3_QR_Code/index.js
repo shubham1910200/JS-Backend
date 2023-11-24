@@ -8,6 +8,7 @@ inquirer
     },
   ])
   .then((answers) => {
+    // console.log('answer',answers);
    const url = answers.URL;
    var qr_svg = qr.image(url); // convert into image
    qr_svg.pipe(fs.createWriteStream('qr_image.png'));
@@ -18,8 +19,8 @@ inquirer
   })
   .catch((error) => {
     if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
+      console.log('Prompt couldnt be rendered in the current environment');
     } else {
-      // Something else went wrong
+      console.log('Something else went wrong');
     }
   });
