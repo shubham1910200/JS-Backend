@@ -19,7 +19,7 @@ function passwordCheck(req,res,next){
     {
         userIsAuthorized = true;
     }
-    next();
+    next(); // it used to pass control to next middleware or route handlers in the sequence
 
 
 }
@@ -42,3 +42,4 @@ app.post('/check',(req,res) => {
 app.listen(port,()=>{
     console.log(`listening on ${port}`);
 })
+
